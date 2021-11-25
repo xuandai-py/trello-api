@@ -1,0 +1,41 @@
+{
+  "name": "trello-api",
+  "version": "1.0.0",
+  "description": "trello-api",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint src",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel ./src -d ./build/src",
+    "build": "npm run clean && npm run build-babel",
+    "production": "npm run build && node ./build/src/server.js",
+    "dev": "nodemon --exec ./node_modules/.bin/babel-node ./src/server.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuandai-py/trello-api.git"
+  },
+  "keywords": [],
+  "author": "xd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xuandai-py/trello-api/issues"
+  },
+  "homepage": "https://github.com/xuandai-py/trello-api#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.16.3",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/node": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^8.3.0",
+    "nodemon": "^2.0.15"
+  }
+}
